@@ -1,0 +1,681 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #07050a;
+  height: 80%;
+  width: 100vw;
+}
+
+nav ul{
+  width: 100vw;
+  height: 7vh;
+  background-color: #1a0b2e;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  cursor: grab;
+  position: sticky;
+  top: 0px;
+  z-index: 3;
+  /* margin-bottom: 15px; */
+}
+
+nav.navbar-blur {
+  backdrop-filter: blur(20px);
+  background-color: rgba(26, 11, 46, 0.2); /* semi-transparent to show blur */
+  
+}
+
+html {
+  scroll-behavior: smooth;
+  transition: all 20s ease-in-out;
+}
+
+ul, a {
+  text-decoration: none;
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  /* border: 2px solid white; */
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  transition: ease-in 2ms;
+  margin-right: 20px;
+}
+
+.sidebar{
+  position: fixed;
+  top: 0px;
+  right: -15px;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(100px);
+  box-shadow: -10px 0px 10px rgb(0,0,0,0.1);
+  /* display: none; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  transform: translateX(100%); /* hide off-screen to the right */
+  transition: transform 0.3s ease-in-out;
+}
+.sidebar.show {
+  /* display: flex; Show when .show class is added */
+  transform: translateX(0);
+}
+
+.sidebar>li{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 20px;
+}
+.sidebar>li>a{
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.silkscreen-regular {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.piedra-regular {
+  font-family: "Piedra", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+.aboutmepage {
+  display: flex;
+  height: 93vh;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  margin-bottom: 20px;
+}
+.aboutskills{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  color: whitesmoke;
+  margin-bottom: 20px;
+}
+
+
+
+.skillscontent{
+  width: fit-content;
+  max-width: 50%; 
+  border-radius: 20px;
+  border: 3px solid rgb(63, 63, 161);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mynamepart {
+  height: fit-content;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: -160px;
+}
+
+.myName {
+  align-self: flex-start;
+  display: flex;
+  width: 95%;
+  flex-direction: column;
+  align-items: left;
+}
+
+ .mypart {
+  width: 80%;
+  align-self: center;
+  font-size:40px;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+#marleft{
+  margin-left: 40px;
+}
+
+.backcircle {
+  height: 5em;
+  width: 4.5em;
+  background: radial-gradient(closest-side at center, #68339c, #3c1f58, #07050a); 
+  border-radius: 50%;
+  position: relative;
+  top:137px;
+  left: -68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.myrole {
+  width: 100%;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.mydesc {
+  font-size: 18px;
+  overflow: wrap;
+  width: 100%;
+}
+.mydesc>h3{
+  width: 75%;
+}
+
+.myimg {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-self: flex-start;
+  align-items: start;
+}
+
+.background_img {
+  width: 90%;
+  height: 70%;
+  min-height: 100px;
+  min-width: 110px;
+  max-height: 260px;
+  max-width: 280px;
+  background-image: url("./src/assets/coder_img.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.contactTitle, .skilltitle{
+  font-size: 2rem;
+  color: white;
+  margin: 20px;
+}
+
+@media screen and (max-width: 703px) {
+  .skillscontent{
+  width: fit-content;
+  max-width: 80%; 
+  border-radius: 20px;
+  border: 3px solid rgb(63, 63, 161);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+  .mynamepart {
+  min-height: 100%;
+  max-height: fit-content;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: -50px;
+  margin-left: 10px;
+}
+
+.myName {
+  align-self: flex-start;
+  display: flex;
+  width: 95%;
+  flex-direction: column;
+  align-items: left;
+}
+
+ .mypart {
+  width: 80%;
+  align-self: center;
+  font-size:20px;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+#marleft{
+  margin-left: 18px;
+}
+.backcircle {
+  height: 5em;
+  width: 4.5em;
+  background: radial-gradient(closest-side at center, #68339c, #3c1f58, #07050a); 
+  border-radius: 50%;
+  position: relative;
+  top: 68px;
+  left: -35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.myrole {
+  width: 150%;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.mydesc {
+  font-size: 70%;
+  overflow: wrap;
+  width: 140%;
+  height: fit-content;
+}
+.mydesc>h3{
+  width: 75%;
+}
+
+.myimg {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  padding-top: 10px;
+  align-self: flex-start;
+  align-items: start;
+}
+
+  .background_img {
+  width: 70%;
+  height: 70%;
+  min-height: 100px;
+  min-width: 140px;
+  max-height: 160px;
+  max-width: 170px;
+  background-image: url("./src/assets/coder_img.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.contactTitle, .skilltitle{
+  font-size: 1.4rem;
+  color: white;
+  margin: 20px;
+}
+
+}
+
+
+
+/* @media only screen and (max-width: 426px) {
+
+  .aboutmepage {
+    width: 100%;
+    display: flex;
+    height: 90vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    color: whitesmoke;
+    margin-right: 14px;
+    border: 2px solid rgb(47, 55, 131);
+  }
+
+  .backcircle {
+    height: 75px;
+    width: 75px;
+    background: radial-gradient(closest-side at center, #68339c, #3c1f58, #07050a);
+    border-radius: 50%;
+    position: relative;
+    top: 48px;
+    left: -38px;
+    z-index: -1;
+  }
+
+  .mynamepart {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .myName {
+    align-self: center;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: left;
+  }
+
+  .mypart {
+    width: 80%;
+    align-self: center;
+    align-content: center;
+    font-size: 1.0rem;
+    margin-bottom: 20px;
+  }
+
+  .myrole {
+    width: 100%;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+
+  .mydesc {
+    align-self: left;
+    font-size: 0.8rem;
+    overflow: wrap;
+    width: 150%;
+  }
+
+  .myimg {
+    width: 30%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .background_img {
+    width: 8rem;
+    height: 10rem;
+    background-image: url("./src/assets/coder_img.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid white;
+    border-radius: 50%;
+  }
+} */
+
+/* From Uiverse.io by MuhammadHasann */ 
+.card {
+  --bg-card: #27272a;
+  --bg-linear: linear-gradient(0deg, red 50%, purple 125%);
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+
+  padding: 1rem;
+  width: fit-content;
+  min-width: 100px;
+  /* height: fit-content; */
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  background-color: var(--bg-card);
+  
+
+  border-radius: 10px;
+  transition: transform 0.100ms ease-in-out;
+}
+
+@media screen and (max-width: 703px) {
+  .card {
+  --bg-card: #27272a;
+  --bg-linear: linear-gradient(0deg, red 50%, purple 125%);
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+
+  padding: 1rem;
+  width: 30%;
+  height: fit-content;
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  background-color: var(--bg-card);
+  
+
+  border-radius: 10px;
+  transition: transform 0.100ms ease-in-out;
+}
+}
+
+.card:hover {
+  transform: scale(1.10); /* scales up by 5% */
+  z-index: 2; /* brings hovered card to front */
+}
+
+/* .image_container {
+  overflow: hidden;
+  cursor: pointer;
+
+  position: relative;
+  /* z-index: 5; */
+
+  /* width: 100%; */
+  /* background-color: var(--primary-800); */
+
+  /* border-radius: 0.5rem; */
+
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  
+  /* text-align: center; */
+/* } */
+
+.image_container{
+
+  width: 4rem;
+  fill: var(--light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid white; */
+}
+
+
+
+.title {
+  overflow: clip;
+
+  /* width: 100%; */
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  font-size: 1.0rem;
+  font-weight: 600;
+  color: var(--light);
+  text-transform: capitalize;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+#Contact, #Projects, #Home, #Skills{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow:hidden;
+  position: relative;
+  padding-top: 50px;
+  /* margin-top: -80px; */
+  scroll-margin-top: 180px;
+  /* justify-content: center; */
+}
+
+
+.backcircle_contact {
+  height: 180px;
+  width: 180px;
+  background: radial-gradient(closest-side at center, #68339c, #1d0f2a, #060409);
+  /* border: 2px solid rgb(146, 40, 162); */
+  border-radius: 50%;
+  position:relative;
+  top: -90px;
+  left: -180px;
+  z-index: -1;
+}
+
+.backcircle_projects {
+  height: 180px;
+  width: 180px;
+  background: radial-gradient(closest-side at center, #8649c2, #341950, #040108);
+  /* border: 2px solid rgb(146, 40, 162); */
+  border-radius: 50%;
+  position:relative;
+  top: 320px;
+  left: -70px;
+  z-index: -3;
+}
+
+.backcircle_projects0 {
+  height: 180px;
+  width: 180px;
+  background: radial-gradient(closest-side at center, #8649c2, #341950, #040108);
+  /* border: 2px solid rgb(146, 40, 162); */
+  border-radius: 50%;
+  position:relative;
+  top: 10px;
+  left: 70px;
+  /* z-index: -3; */
+}
+
+/* From Uiverse.io by DavidTM96 */ 
+.form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  font-family: inherit;
+  gap: 10px;
+  padding-inline: 2em;
+  padding-bottom: 0.4em;
+  background-color: #171717;
+  /* background-color: #0a192f; */
+  border-radius: 20px;
+}
+
+.form-heading {
+  text-align: center;
+  margin: 2em;
+  color: #68339c;
+  font-size: 1.2em;
+  background-color: transparent;
+  align-self: center;
+}
+
+.form-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8em;
+  border-radius: 10px;
+  padding: 0.6em;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #ccd6f6;
+  padding-inline: 1em;
+  margin-bottom: 5px;
+}
+
+.sendMessage-btn {
+  cursor: pointer;
+  margin-bottom: 3em;
+  padding: 1em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #68339c;
+  font-weight: bold;
+  outline: 1px solid #68339c;
+  transition: all ease-in-out 0.3s;
+}
+
+.sendMessage-btn:hover {
+  transition: all ease-in-out 0.3s;
+  background-color: #68339c;
+  color: #000;
+  cursor: pointer;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.form-card1 {
+  background-image: linear-gradient(163deg, #68339c 0%, #68339c 100%);
+  border-radius: 22px;
+  transition: all 0.3s;
+}
+
+.form-card1:hover {
+  box-shadow: 0px 0px 30px 1px #68339c;
+}
+
+.form-card2 {
+  border-radius: 0;
+  transition: all 0.2s;
+}
+
+.form-card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+.menu-btn{
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .hideOnMobile{
+    display: none;
+  }
+  
+  .menu-btn{
+  display: block;
+}
+}
+
+
