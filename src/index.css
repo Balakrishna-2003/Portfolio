@@ -5,36 +5,30 @@
 
 body {
   background-color: #07050a;
-  height: 80%;
+  /* height: 80%; */
+  height: auto;
   width: 100vw;
 }
-nav{
-  position: sticky;
-  top: 0px;
-  z-index: 3;
-}
+
 nav ul{
   width: 100vw;
-  height: 7vh;
-  background-color: #1a0b2e;
+  height: 56px;
+  
   color: white;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   cursor: grab;
-  position: sticky;
+  margin-right: 20px;
+}
+nav{
+  position: fixed;
   top: 0px;
   z-index: 3;
-  margin-right: 20px;
-  border: 2px solid white;
-  /* margin-bottom: 15px; */
+  background-color: #1a0b2e;
+  transition: all 200ms ease-in-out;
 }
 
-nav.navbar-blur {
-  backdrop-filter: blur(20px);
-  background-color: rgba(26, 11, 46, 0.2); /* semi-transparent to show blur */
-  
-}
 
 html {
   scroll-behavior: smooth;
@@ -47,12 +41,18 @@ ul, a {
   height: 100%;
   display: flex;
   align-items: center;
-  /* border: 2px solid white; */
   font-size: 20px;
   text-decoration: none;
   color: white;
   transition: ease-in 2ms;
   margin-right: 50px;
+}
+
+
+nav.navbar-blur {
+  backdrop-filter: blur(10px);
+  background-color: rgba(34, 20, 54, 0.2);
+  /* background-color: transparent; */
 }
 
 
@@ -66,16 +66,14 @@ ul, a {
   background-color: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(100px);
   box-shadow: -10px 0px 10px rgb(0,0,0,0.1);
-  /* display: none; */
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 
-  transform: translateX(100%); /* hide off-screen to the right */
+  transform: translateX(100%); 
   transition: transform 0.3s ease-in-out;
 }
 .sidebar.show {
-  /* display: flex; Show when .show class is added */
   transform: translateX(0);
 }
 
@@ -234,6 +232,7 @@ ul, a {
 }
 
 @media screen and (max-width: 703px) {
+  
   .skillscontent{
   width: fit-content;
   max-width: 80%; 
@@ -341,88 +340,6 @@ ul, a {
 }
 
 
-
-/* @media only screen and (max-width: 426px) {
-
-  .aboutmepage {
-    width: 100%;
-    display: flex;
-    height: 90vh;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    color: whitesmoke;
-    margin-right: 14px;
-    border: 2px solid rgb(47, 55, 131);
-  }
-
-  .backcircle {
-    height: 75px;
-    width: 75px;
-    background: radial-gradient(closest-side at center, #68339c, #3c1f58, #07050a);
-    border-radius: 50%;
-    position: relative;
-    top: 48px;
-    left: -38px;
-    z-index: -1;
-  }
-
-  .mynamepart {
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .myName {
-    align-self: center;
-    display: flex;
-    width: 80%;
-    flex-direction: column;
-    align-items: left;
-  }
-
-  .mypart {
-    width: 80%;
-    align-self: center;
-    align-content: center;
-    font-size: 1.0rem;
-    margin-bottom: 20px;
-  }
-
-  .myrole {
-    width: 100%;
-    font-size: 0.9rem;
-    margin-bottom: 30px;
-  }
-
-  .mydesc {
-    align-self: left;
-    font-size: 0.8rem;
-    overflow: wrap;
-    width: 150%;
-  }
-
-  .myimg {
-    width: 30%;
-    height: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  .background_img {
-    width: 8rem;
-    height: 10rem;
-    background-image: url("./src/assets/coder_img.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: 2px solid white;
-    border-radius: 50%;
-  }
-} */
-
 /* From Uiverse.io by MuhammadHasann */ 
 .card {
   --bg-card: #27272a;
@@ -484,25 +401,6 @@ ul, a {
   z-index: 2; /* brings hovered card to front */
 }
 
-/* .image_container {
-  overflow: hidden;
-  cursor: pointer;
-
-  position: relative;
-  /* z-index: 5; */
-
-  /* width: 100%; */
-  /* background-color: var(--primary-800); */
-
-  /* border-radius: 0.5rem; */
-
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
-  
-  /* text-align: center; */
-/* } */
 
 .image_container{
 
@@ -684,5 +582,4 @@ ul, a {
   display: block;
 }
 }
-
 
