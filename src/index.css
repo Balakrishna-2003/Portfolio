@@ -8,7 +8,11 @@ body {
   height: 80%;
   width: 100vw;
 }
-
+nav{
+  position: sticky;
+  top: 0px;
+  z-index: 3;
+}
 nav ul{
   width: 100vw;
   height: 7vh;
@@ -21,6 +25,8 @@ nav ul{
   position: sticky;
   top: 0px;
   z-index: 3;
+  margin-right: 20px;
+  border: 2px solid white;
   /* margin-bottom: 15px; */
 }
 
@@ -46,8 +52,9 @@ ul, a {
   text-decoration: none;
   color: white;
   transition: ease-in 2ms;
-  margin-right: 20px;
+  margin-right: 50px;
 }
+
 
 .sidebar{
   position: fixed;
