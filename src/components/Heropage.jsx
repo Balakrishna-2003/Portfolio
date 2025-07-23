@@ -6,7 +6,7 @@ export default function Heropage() {
     useEffect(() => {
         // Typing animation script start
        const typing = new Typed(el.current, {
-            strings: ["Hello world","React dev"],
+            strings: ["Android Developer", "Full Stack Developer"],
             typeSpeed: 100,
             backSpeed: 40,
             loop: true,
